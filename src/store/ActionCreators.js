@@ -67,7 +67,7 @@ export const updateGenreFilteredData = genreData => {
 	myElement.firstChild.nodeValue = "Select genre";
 	return {
 		type: actionTypes.GENRE_DATA_UPDATE,
-		genreFilteredData: genreData,
+		genreFilteredData: genreData
 	}
 }
 

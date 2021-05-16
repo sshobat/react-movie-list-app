@@ -1,15 +1,19 @@
-import React, {Component} from 'react';
+//import modules
+import {Component} from 'react';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+//import style
 import './Card.scss';
+//import images
 import eye from '../../images/eye.png';
 import trash from '../../images/trash.png';
 import trash1 from '../../images/trash1.png';
 import up from '../../images/up.png';
 import down from '../../images/down.png';
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
+//import ActionCreators
 import * as actionCreators from '../../store/ActionCreators';
 
-class Card extends Component{
+class Card extends Component {
 
 	render() {
 		const {title, genre, rating, uniqueId, element, order, watched, image} = this.props;

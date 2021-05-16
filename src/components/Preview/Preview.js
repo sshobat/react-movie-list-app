@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
-import './Preview.scss';
+//import modules
+import {Component} from 'react';
 import {Link} from 'react-router-dom';
+//import style
+import './Preview.scss';
 
-class Preview extends Component{
+class Preview extends Component {
 
 	render() {
 		const {actors, director, plot, genre, poster, released, runtime, title, rating} = this.props;

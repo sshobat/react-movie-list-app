@@ -1,6 +1,9 @@
-import React, {Component} from 'react';
+//import modules
+import {Component} from 'react';
+//import style
 import './Header.scss';
-import Search from '../Search/Search';
+//import components
+import SearchField from '../SearchField/SearchField';
 import {Logo} from '../Logo/Logo';
 
 class Header extends Component{
@@ -9,12 +12,12 @@ class Header extends Component{
 		return (
 			<header>
 				<div className="main-wrapper">
-					<Logo/>
-					<Search />
+					<Logo />
+					<SearchField />
 				</div>
 			</header>
-		)
+		);
 	}
 }
 
-export {Header};
+export { Header };

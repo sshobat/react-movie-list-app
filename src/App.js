@@ -1,17 +1,24 @@
-import React, {Fragment} from 'react';
-import './App.scss';
-import Cards from './components/Cards/Cards';
-import {Preview} from './components/Preview/Preview';
-import {Header} from './components/Header/Header';
+//import modules
+import {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as actionCreators from './store/ActionCreators';
+//import style
+import './App.scss';
+//import components
+import Cards from './components/Cards/Cards';
+import {Preview} from './components/Preview/Preview';
+import {Header} from './components/Header/Header';
+//import images
 import reset from './images/reset.png';
 
-class App extends React.Component {
+class App extends Component {
+
+  
 
   componentDidMount(){
-    this.props.onLoad(); 
+    this.props.onLoad();
+    console.log(this.props); 
   }
 
   componentDidUpdate() {
@@ -26,15 +33,16 @@ class App extends React.Component {
 
     return (
 
-        <Fragment>
+        <>
           <Switch>
+            
             <Route exact path="/" >
                 <Header />
 
               { !toWatchMovies.length && <h1 className="nodata"> Search for your favourite movies</h1>}
 
               { !!toWatchMovies.length &&
-                <Fragment>
+                <>
                   <Cards movies={genreFilteredMovies} /> 
 
                   <Cards watched movies={watchedMovies} /> 
@@ -50,9 +58,8 @@ class App extends React.Component {
                     </ul>
                   </div>
 
-                </Fragment>
+                </>
               }
-
             </Route>
 
             <Route exact path={window.location.pathnamet} >
@@ -70,7 +77,7 @@ class App extends React.Component {
                 }
             </Route>
           </Switch> 
-        </Fragment>
+        </>
     )
   }
 }

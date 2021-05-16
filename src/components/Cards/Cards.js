@@ -1,7 +1,11 @@
-import React, {Component} from 'react';
-import './Cards.scss';
-import Card from '../Card/Card';
+//import modules
+import {Component} from 'react';
 import {connect} from 'react-redux';
+//import style
+import './Cards.scss';
+//import components
+import Card from '../Card/Card';
+//import ActionCreators
 import * as actionCreators from '../../store/ActionCreators';
 
 class Cards extends Component{
@@ -10,7 +14,6 @@ class Cards extends Component{
 		const {watched, onLoad} = this.props;
 		watched && onLoad();
 	}
-
 
 	render() {
 		const {movies, watched} = this.props;

@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
-import './Search.scss';
+//import modules
+import {Component} from 'react';
 import {connect} from 'react-redux';
-import * as actionCreators from '../../store/ActionCreators';
 import uuid from 'react-uuid';
+//import style
+import './SearchField.scss';
+//import ActionCreators
+import * as actionCreators from '../../store/ActionCreators';
 
-
-class Search extends Component {
+class SearchField extends Component {
 
 	state = {
 		searchedTerm : '',
-		drop: false,
+		drop: false
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
@@ -72,7 +74,7 @@ class Search extends Component {
 const mapStateToProps = state => {
   return {
     filteredData : state.filteredData,
-	toWatchMovies: state.toWatchMovies,
+	toWatchMovies: state.toWatchMovies
   }
 }
 
@@ -83,4 +85,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchField);
