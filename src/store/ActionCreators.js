@@ -1,5 +1,5 @@
 import * as actionTypes from './ActionTypes';
-import {Communicators} from '../Communicators';
+import * as Communicators from '../Communicators';
 
 const formatData = myData => {
 	const data = [];
@@ -10,10 +10,10 @@ const formatData = myData => {
 		});
 	}
 
-	return data
+	return data;
 }
 
-const sortMovies = (a, b) =>{
+const sortMovies = (a, b) => {
     const orderA = a.order;
     const orderB = b.order;
 
@@ -25,9 +25,9 @@ const sortMovies = (a, b) =>{
     }
 
     return comparison;
-  }
+}
 
- const takeGenres = arrayOfFilms => {
+const takeGenres = arrayOfFilms => {
 	const arrayOfGenres = [];
 	arrayOfFilms.forEach( movie => {
 		const innerGenres = movie.Genre.split(", ");

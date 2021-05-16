@@ -14,8 +14,6 @@ import reset from './images/reset.png';
 
 class App extends Component {
 
-  
-
   componentDidMount(){
     this.props.onLoad();
     console.log(this.props); 
@@ -88,7 +86,7 @@ const mapStateToProps = state => {
     toWatchMovies: state.toWatchMovies,
     watchedMovies: state.watchedMovies,
     genreFilteredMovies : state.genreFilteredMovies,
-    genres : state.genres,
+    genres : state.genres
   }
 }
 
