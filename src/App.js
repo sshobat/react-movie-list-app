@@ -15,7 +15,8 @@ import CustomSearch from "./components/CustomSearch/CustomSearch";
 import leftArrow from "./images/up.png";
 
 class App extends Component {
-  componentDidMount() {
+
+  componentDidMount(){
     this.props.onLoad();
   }
 
@@ -135,10 +136,10 @@ const mapStateToProps = state => {
     more: state.more,
     toWatchMovies: state.toWatchMovies,
     watchedMovies: state.watchedMovies,
-    genreFilteredMovies: state.genreFilteredMovies,
-    genres: state.genres,
-  };
-};
+    genreFilteredMovies : state.genreFilteredMovies,
+    genres : state.genres
+  }
+}
 
 const mapDispatchToProps = dispatch => {
   return {

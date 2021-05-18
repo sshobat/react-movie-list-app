@@ -1,44 +1,41 @@
-import * as actionTypes from "./ActionTypes";
-import { Communicators } from "../Communicators";
+import * as actionTypes from './ActionTypes';
+import * as Communicators from '../Communicators';
 
 const formatData = myData => {
-  const data = [];
-  for (const property in myData) {
-    data.push({
-      ...myData[property],
-      id: property,
-    });
-  }
+	const data = [];
+	for(const property in myData) {
+		data.push({
+			...myData[property],
+			id: property,
+		});
+	}
 
-  return data;
-};
+	return data;
+}
+
+const sortMovies = (a, b) => {
+    const orderA = a.order;
+    const orderB = b.order;
 
 const sortMovies = (a, b) => {
   const orderA = a.order;
   const orderB = b.order;
 
-  let comparison = 0;
-  if (orderA > orderB) {
-    comparison = 1;
-  } else if (orderA < orderB) {
-    comparison = -1;
-  }
-
-  return comparison;
-};
+    return comparison;
+}
 
 const takeGenres = arrayOfFilms => {
-  const arrayOfGenres = [];
-  arrayOfFilms.forEach(movie => {
-    const innerGenres = movie.Genre.split(", ");
-    innerGenres.forEach(genre => {
-      if (!arrayOfGenres.includes(genre)) {
-        arrayOfGenres.push(genre);
-      }
-    });
-  });
-  return arrayOfGenres;
-};
+	const arrayOfGenres = [];
+	arrayOfFilms.forEach( movie => {
+		const innerGenres = movie.Genre.split(", ");
+		innerGenres.forEach( genre => {
+			if (!arrayOfGenres.includes(genre)) {
+				arrayOfGenres.push(genre);
+			}
+		})
+	})
+	return arrayOfGenres;
+}
 
 const updateMore = more => {
   return {
