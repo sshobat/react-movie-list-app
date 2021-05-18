@@ -17,9 +17,12 @@ const sortMovies = (a, b) => {
     const orderA = a.order;
     const orderB = b.order;
 
-const sortMovies = (a, b) => {
-  const orderA = a.order;
-  const orderB = b.order;
+    let comparison = 0;
+    if (orderA > orderB) {
+      comparison = 1;
+    } else if (orderA < orderB) {
+      comparison = -1;
+    }
 
     return comparison;
 }
@@ -311,4 +314,4 @@ export const moveDown = order => {
         .catch(error => alert(`Error: ${error}`));
     }
   };
-};
+}
