@@ -1,0 +1,17 @@
+.movie {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .info {
+    width: 50%;
+    margin-left: 20px;
+
+    h3 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+  }
+}

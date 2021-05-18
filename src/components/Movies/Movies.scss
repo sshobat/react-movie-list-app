@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap");
+
+.cards {
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  h2 {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+}

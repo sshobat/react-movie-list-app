@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Rubik:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #151f30;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+button {
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #27344c;
+  padding: 5px 10px;
+  font-size: 15px;
+
+  &:hover {
+    opacity: 1;
+  }
+}

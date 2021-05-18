@@ -1,7 +1,7 @@
 import * as actionTypes from './ActionTypes';
 
 const initialState = {
-	more : '',
+		more : '',
     filteredData : [],
     toWatchMovies: [],
     watchedMovies: [],
@@ -18,7 +18,7 @@ const reducer = (state = initialState, action) => {
 				...state,
 				filteredData: action.filteredData
 			};
-	
+
 		case actionTypes.MORE_UPDATE :
 			return {
 				...state,
@@ -44,7 +44,7 @@ const reducer = (state = initialState, action) => {
 				...state,
 				watchedMovies: action.watchedMovies
 			};
-			
+
 		default : return state;
 	}
 }

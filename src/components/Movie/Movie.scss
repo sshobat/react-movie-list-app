@@ -1,0 +1,89 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 280px;
+  width: 100%;
+  margin-bottom: 40px;
+
+  .poster-holder {
+    width: 280px;
+    height: 400px;
+    position: relative;
+
+    .poster {
+      height: 100%;
+      width: 100%;
+    }
+
+    .rating {
+      position: absolute;
+      background: #27344c;
+      background: linear-gradient(0deg, #27344c 0%, #374765 100%);
+      text-align: center;
+      width: fit-content;
+      padding: 15px;
+      margin: 0;
+      top: 0;
+      right: 0;
+      font-weight: 600;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      button {
+        background: linear-gradient(0deg, #27344c 0%, #374765 100%);
+        padding: 10px 10px 5px;
+      }
+    }
+  }
+
+  .card-info {
+    h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      opacity: 0.8;
+      margin-top: 15px;
+      font-size: 19px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .genres {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 12px;
+
+      span {
+        padding: 5px 10px;
+        background-color: #2c3a52;
+        cursor: pointer;
+        margin-bottom: 2px;
+        opacity: 0.8;
+        border-radius: 4px;
+        margin-right: 10px;
+        margin-top: 10px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .arrows {
+    img {
+      transform: rotate(90deg);
+    }
+  }
+}
