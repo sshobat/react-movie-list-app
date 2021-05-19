@@ -18,7 +18,7 @@ class Movie extends Component {
     const { title, genre, rating, uniqueId, element, order, watched, image } =
       this.props;
     const {
-      onMoreUpdate,
+      onBigMovieUpdate,
       filterGenre,
       onDelete,
       deleteMovie,
@@ -35,7 +35,7 @@ class Movie extends Component {
         <div className="poster-holder">
           <Link to={preview}>
             <img
-              onClick={() => onMoreUpdate(uniqueId)}
+              onClick={() => onBigMovieUpdate(uniqueId)}
               src={image}
               alt="img"
               className="poster"
@@ -72,7 +72,7 @@ class Movie extends Component {
 
         <div className="card-info">
           <Link to={preview}>
-            <h3 onClick={() => onMoreUpdate(uniqueId)}> {title}</h3>
+            <h3 onClick={() => onBigMovieUpdate(uniqueId)}> {title}</h3>
           </Link>
 
           <div className="genres">
@@ -97,7 +97,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onMoreUpdate: uniqueId => dispatch(actionCreators.getMore(uniqueId)),
+    onBigMovieUpdate: uniqueId => dispatch(actionCreators.getBigMovie(uniqueId)),
     deleteMovie: uniqueId => dispatch(actionCreators.deleteMovie(uniqueId)),
     onDelete: databaseID =>
       dispatch(actionCreators.deleteWatchedMovie(databaseID)),

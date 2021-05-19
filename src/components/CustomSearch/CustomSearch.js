@@ -29,12 +29,7 @@ class CustomSearch extends Component {
 
   componentDidUpdate() {
     const { searchValue } = this.state;
-    this.dataSearch(searchValue);
-  }
-
-  dataSearch(text) {
-    let myString = text.replace(/ /gi, "+");
-    this.props.onFilteredDataUpdate(myString);
+    this.props.onFilteredDataUpdate(searchValue);
   }
 
   addValue(event) {

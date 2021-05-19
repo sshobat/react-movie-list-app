@@ -22,7 +22,7 @@ class App extends Component {
 
   componentDidUpdate() {
     if (window.location.pathname !== "/") {
-      this.props.onMoreUpdate(
+      this.props.onBigMovieUpdate(
         window.location.pathname.substr(
           window.location.pathname.lastIndexOf("/") + 1
         )
@@ -32,7 +32,7 @@ class App extends Component {
 
   render() {
     const {
-      more,
+      bigMovie,
       toWatchMovies,
       watchedMovies,
       genreFilteredMovies,
@@ -50,7 +50,7 @@ class App extends Component {
       Runtime,
       Title,
       imdbRating,
-    } = more;
+    } = bigMovie;
 
     return (
       <>
@@ -111,7 +111,7 @@ class App extends Component {
                 </p>
               </div>
             </Header>
-            {more && (
+            {bigMovie && (
               <BigMovie
                 title={Title}
                 released={Released}
@@ -133,7 +133,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    more: state.more,
+    bigMovie: state.bigMovie,
     toWatchMovies: state.toWatchMovies,
     watchedMovies: state.watchedMovies,
     genreFilteredMovies : state.genreFilteredMovies,
@@ -146,7 +146,7 @@ const mapDispatchToProps = dispatch => {
     onFilteredDataUpdate: filteredData =>
       dispatch(actionCreators.updateFilteredData(filteredData)),
     onLoad: () => dispatch(actionCreators.onLoad()),
-    onMoreUpdate: uniqueId => dispatch(actionCreators.getMore(uniqueId)),
+    onBigMovieUpdate: uniqueId => dispatch(actionCreators.getBigMovie(uniqueId)),
     filterGenre: myGenre => dispatch(actionCreators.filterGenre(myGenre)),
     updateGenreFilteredData: myData =>
       dispatch(actionCreators.updateGenreFilteredData(myData)),

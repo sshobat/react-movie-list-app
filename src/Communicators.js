@@ -1,5 +1,5 @@
-export const baseURL = 'https://movies-22220.firebaseio.com/movies';
-export const watchedURL = 'https://movies-22220.firebaseio.com/watched';
+export const baseURL = 'https://movie-app-7527e-default-rtdb.firebaseio.com/movies';
+export const watchedURL = 'https://movie-app-7527e-default-rtdb.firebaseio.com/watched';
 export const omdbURL = 'https://www.omdbapi.com/?type=movie&apikey=e47d96d0';
 
 export const Fetch = () => {
@@ -45,12 +45,12 @@ export const DeleteWatched = (elementID) => {
 		    })
 }
 
-export const More = (databaseID) => {
+export const bigMovie = (databaseID) => {
 	return fetch(`${baseURL}/${databaseID}.json`)
 	  		.then( response => response.json())
 }
 
-export const MoreWatched = (databaseID) => {
+export const bigMovieWatched = (databaseID) => {
 	return fetch(`${watchedURL}/${databaseID}.json`)
 	  		.then( response => response.json())
 }

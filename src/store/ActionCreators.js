@@ -40,10 +40,10 @@ const takeGenres = arrayOfFilms => {
 	return arrayOfGenres;
 }
 
-const updateMore = more => {
+const updateBigMovie = bigMovie => {
   return {
-    type: actionTypes.MORE_UPDATE,
-    more: more,
+    type: actionTypes.BIGMOVIE_UPDATE,
+    bigMovie: bigMovie,
   };
 };
 
@@ -218,7 +218,7 @@ export const onWatchedLoad = () => {
   };
 };
 
-export const getMore = databaseID => {
+export const getBigMovie = databaseID => {
   return (dispatch, getState) => {
     let filteredArray = getState().toWatchMovies.filter(
       movie => movie.id === databaseID
@@ -228,7 +228,7 @@ export const getMore = databaseID => {
         movie => movie.id === databaseID
       );
     }
-    dispatch(updateMore(filteredArray[0]));
+    dispatch(updateBigMovie(filteredArray[0]));
   };
 };
 
