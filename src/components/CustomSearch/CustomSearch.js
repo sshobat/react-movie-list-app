@@ -7,7 +7,11 @@ import "./CustomSearch.scss";
 //import ActionCreators
 import * as actionCreators from "../../store/ActionCreators";
 
-
+class CustomSearch extends Component {
+  state = {
+    searchValue: "",
+    dropList: false,
+  };
 
   shouldComponentUpdate(nextProps, nextState) {
     const { filteredData, toWatchMovies } = this.props;
